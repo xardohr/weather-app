@@ -1,0 +1,97 @@
+.left-container{
+    background-image: url("/images/middle-day.jpg");
+    background-size: cover;
+    padding-left: 10rem;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+
+    
+}
+.fahrenheit-button-container{
+    padding-top: 5rem;
+    text-align: center;
+}
+
+.main-info-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+}
+.displayed-info{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+.displayed-temp{
+    font-size: 8rem;
+}
+.displayed-city{
+    font-size: 3.5rem;
+}
+.displayed-condition{
+
+}
+
+/* right side */
+
+.right-container{
+    padding: 3rem;
+    background-image: linear-gradient(to bottom right,#415a77, #0096c7);
+    position: relative;
+    display: grid;
+    grid-template-rows: 30% 70%;
+    height: 100%;
+    
+}
+.search{
+    position: absolute;
+    top: 0;
+    right:0;
+    width: 9rem;
+    height: 7rem;
+    background-color: #778da9;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.search:hover{
+    background-color: #778da9be;
+}
+input{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid gray;
+    font-size: 2rem;
+    padding-left: 1rem;
+    color: white;
+}
+input:focus{
+    outline: none;
+}
+
+.weather-details-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    border-bottom: 1px solid gray;
+    /* height: 100%; */
+}
+
+.weather-detail{
+    color: white;
+    font-size: 2rem;
+}
+
+.weather-details{
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    height: 100%;
+}
+.details{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem 0 2rem;
+}
