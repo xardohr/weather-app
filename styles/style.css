@@ -53,6 +53,9 @@
 .displayed-city{
     font-size: 3.5rem;
 }
+.displayed-date{
+    font-size: 1.4rem;
+}
 .displayed-condition-container{
     display: flex;
     justify-content: center;
@@ -137,4 +140,14 @@ input::placeholder{
 
 .number{
     color:#e9ecef;
+}
+
+.displayed-temp-container{
+    position:relative;
+}
+.cel-fahr{
+    position: absolute;
+    top:0;
+    right: -1.5rem;
+    font-size: 2rem;
 }

@@ -15,6 +15,7 @@ const displayedConditionIcon = document.querySelector(
 );
 const fahrBtn = document.querySelector(".fahrenheit-button");
 const celciusBtn = document.querySelector(".celcius-button");
+const celcFahr = document.querySelector(".cel-fahr");
 
 async function getWeather(city) {
   try {
@@ -26,7 +27,8 @@ async function getWeather(city) {
     console.log(weatherData);
 
     // dom manipulation left side
-    displayedTemp.textContent = weatherData.current.feelslike_c;
+    displayedTemp.textContent = `${weatherData.current.feelslike_c}`;
+    celcFahr.textContent = "°C";
     displayedCity.textContent = weatherData.location.name;
     displayedDate.textContent = weatherData.location.localtime;
     displayedCondition.textContent = weatherData.current.condition.text;
@@ -41,14 +43,17 @@ async function getWeather(city) {
 
     // switching temp
     function switchToFahrenheit() {
-      displayedTemp.textContent = weatherData.current.feelslike_f;
+      displayedTemp.textContent = `${weatherData.current.feelslike_f}`;
       fahrBtn.classList.add("hidden");
       celciusBtn.classList.remove("hidden");
+      celcFahr.textContent = "°F";
     }
     function switchToCelcius() {
-      displayedTemp.textContent = weatherData.current.feelslike_c;
+      displayedTemp.innerHTML = `${weatherData.current.feelslike_c}`;
+
       celciusBtn.classList.add("hidden");
       fahrBtn.classList.remove("hidden");
+      celcFahr.textContent = "°C";
     }
   } catch (error) {
     const errorMessage = `Enter a valid city name`;
