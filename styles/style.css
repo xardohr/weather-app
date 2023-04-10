@@ -134,3 +134,7 @@ input::placeholder{
     padding: 0 2rem 0 2rem;
     font-size: 1.5rem;
 }
+
+.number{
+    color:#e9ecef;
+}
