@@ -28,6 +28,11 @@
     cursor: pointer;
     background-image: linear-gradient(to bottom right,#415a77, #0096c7);
     color: white;
+    transition: all 0.3s;
+}
+.fahrenheit-button:hover,
+.celcius-button:hover{
+    background-image: linear-gradient(to bottom right, #0096c7,#415a77)
 }
 
 
