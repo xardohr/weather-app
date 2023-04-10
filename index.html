@@ -12,9 +12,10 @@
 <body>
     <div class="left-container">
         <div class="fahrenheit-button-container">
-            Switch to Fahrenheit
+            <button class="fahrenheit-button hidden"> Switch to Fahrenheit </button>
+            <button class="celcius-button hidden">Switch to Celcius </button>
         </div>
-        <div class="main-info-container">
+        <div class="main-info-container hidden">
             <div class="displayed-info">
                 <div class="displayed-temp">26</div>
                 <div class="city-info">
@@ -22,32 +23,35 @@
                     <div class="displayed-date">2023-04-09 05:30</div>
                 </div>
             </div>
-            <div class="displayed-condition">Sunny</div>
+            <div class="displayed-condition-container">
+                <div class="displayed-condition">Sunny</div>
+                <img class="displayed-condition-icon" src="">
+            </div>
         </div>
     </div>
     <div class="right-container">
-        <button class="search"><ion-icon name="search-outline"></ion-icon></button>
+        <button type="submit" class="search"><ion-icon name="search-outline"></ion-icon></button>
         <div class="input-container">
-            <input placeholder="Another location" maxlength="15">
+            <input placeholder="Enter location" class="user-input" maxlength="15">
         </div>
         <div class="weather-details-container">
             <p class="weather-detail">Weather Details</p>
             <div class="weather-details">
                 <div class="cloud-container details">
-                    <div class="cloud">Cloudy</div>
-                    <div class="cloud-number">10%</div>
+                    <div class="cloud">Cloud</div>
+                    <div class="cloud-number hidden">10%</div>
                 </div>
                 <div class="humidity-container details">
                     <div class="humidity">Humidity</div>
-                    <div class="humidity-number">50%</div>
+                    <div class="humidity-number hidden">50%</div>
                 </div>
                 <div class="wind-container details">
-                    <div class="wind">Windy</div>
-                    <div class="wind-number">1km/h</div>
+                    <div class="wind">Wind</div>
+                    <div class="wind-number hidden">1km/h</div>
                 </div>
                 <div class="rain-container details">
                     <div class="rain">Rain</div>
-                    <div class="rain-number">0%</div>
+                    <div class="rain-number hidden">0%</div>
                 </div>
             </div>
         </div>

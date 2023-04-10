@@ -1,3 +1,7 @@
+.hidden{
+    display: none !important;
+}
+
 .left-container{
     background-image: url("/images/middle-day.jpg");
     background-size: cover;
@@ -5,13 +9,27 @@
     display: grid;
     grid-template-rows: 1fr 1fr;
     height: 100%;
+    color: white;
 
     
 }
 .fahrenheit-button-container{
-    padding-top: 5rem;
+    padding-top: 2rem;
     text-align: center;
+    
+
 }
+.fahrenheit-button,
+.celcius-button{
+    padding: 1.5rem 2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10rem;
+    cursor: pointer;
+    background-image: linear-gradient(to bottom right,#415a77, #0096c7);
+    color: white;
+}
+
 
 .main-info-container{
     display: flex;
@@ -30,8 +48,17 @@
 .displayed-city{
     font-size: 3.5rem;
 }
+.displayed-condition-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .displayed-condition{
-
+    font-size: 1.4rem;
+}
+.displayed-condition-icon{
+    height: 8rem;
+    width: 8rem;
 }
 
 /* right side */
@@ -62,19 +89,23 @@
 input{
     border: none;
     background: transparent;
-    border-bottom: 1px solid gray;
+    border-bottom: 1px solid #868e96;
     font-size: 2rem;
-    padding-left: 1rem;
+    /* padding-left: 1rem; */
     color: white;
+    width: 80%;
 }
 input:focus{
     outline: none;
+}
+input::placeholder{
+    color:#868e96;
 }
 
 .weather-details-container{
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
     border-bottom: 1px solid gray;
     /* height: 100%; */
 }
@@ -89,9 +120,12 @@ input:focus{
     flex-direction: column;
     gap: 3rem;
     height: 100%;
+    color:#adb5bdcc;
+    font-weight: bold;
 }
 .details{
     display: flex;
     justify-content: space-between;
     padding: 0 2rem 0 2rem;
+    font-size: 1.5rem;
 }
